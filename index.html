@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathJax</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- MathJax v3 (TeX input) -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["$", "$"],
+          ],
+          displayMath: [
+            ["\\[", "\\]"],
+            ["$$", "$$"],
+          ],
+          processEscapes: true,
+          packages: { "[+]": ["ams"] },
+        },
+        options: {
+          skipHtmlTags: [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code",
+          ],
+        },
+      };
+    </script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav>
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#aritmetica">Aritmética y comparación</a></li>
+        <li><a href="#superindices">Superíndices</a></li>
+        <li><a href="#subindices">Subíndices</a></li>
+        <li><a href="#raices">Raíces</a></li>
+        <li><a href="#fracciones">Fracciones</a></li>
+        <li><a href="#binomios">Binomios</a></li>
+        <li><a href="#delimitadores">Delimitadores</a></li>
+        <li><a href="#corchetes">Corchetes</a></li>
+        <li><a href="#griegas">Letras griegas</a></li>
+        <li><a href="#conjuntos">Teoría de conjuntos</a></li>
+        <li><a href="#logica">Lógica</a></li>
+        <li><a href="#calculo">Cálculo</a></li>
+        <li><a href="#vectores">Vectores</a></li>
+        <li><a href="#matrices">Matrices</a></li>
+        <li><a href="#funciones">Funciones</a></li>
+        <li><a href="#acentos">Acentos</a></li>
+        <li><a href="#decoraciones">Decoraciones</a></li>
+        <li><a href="#flechas">Flechas</a></li>
+        <li><a href="#numericos">Conjuntos numéricos</a></li>
+        <li><a href="#probabilidad">Probabilidad</a></li>
+        <li><a href="#estadistica">Estadística</a></li>
+        <li><a href="#geometria">Geometría</a></li>
+        <li><a href="#operadores">Operadores</a></li>
+        <li><a href="#especiales">Símbolos especiales</a></li>
+        <li><a href="#casos">Funciones por casos</a></li>
+        <li><a href="#espaciado">Espaciado</a></li>
+        <li><a href="#entornos">Entornos</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Helper: Each section is a table. Examples use MathJax inline delimiters \( ... \) -->
+      <section id="aritmetica">
+        <h2>Aritmética y comparación</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">+</code></td>
+                <td>Suma</td>
+                <td class="math">\(a+b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">-</code></td>
+                <td>Resta / signo negativo</td>
+                <td class="math">\(a-b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\pm</code></td>
+                <td>Más/menos</td>
+                <td class="math">\(a\pm b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mp</code></td>
+                <td>Menos/más</td>
+                <td class="math">\(a\mp b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\times</code></td>
+                <td>Multiplicación</td>
+                <td class="math">\(a\times b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\cdot</code></td>
+                <td>Multiplicación punto / producto punto</td>
+                <td class="math">\(a\cdot b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\div</code></td>
+                <td>División</td>
+                <td class="math">\(a\div b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">=</code></td>
+                <td>Igual</td>
+                <td class="math">\(a=b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\neq</code></td>
+                <td>Distinto</td>
+                <td class="math">\(a\neq b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">&lt;, &gt;</code></td>
+                <td>Menor / mayor</td>
+                <td class="math">\(a&lt;b,\ a&gt;b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\le, \ge</code></td>
+                <td>Menor/mayor o igual</td>
+                <td class="math">\(a\le b,\ a\ge b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\ll, \gg</code></td>
+                <td>Mucho menor/mayor</td>
+                <td class="math">\(a\ll b,\ a\gg b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\approx</code></td>
+                <td>Aproximadamente igual</td>
+                <td class="math">\(a\approx b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\sim</code></td>
+                <td>Similar</td>
+                <td class="math">\(a\sim b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\cong</code></td>
+                <td>Congruente</td>
+                <td class="math">\(A\cong B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\equiv</code></td>
+                <td>Equivalente</td>
+                <td class="math">\(a\equiv b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\propto</code></td>
+                <td>Proporcional</td>
+                <td class="math">\(y\propto x\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="superindices">
+        <h2>Superíndices</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">^</code></td>
+                <td>Superíndice</td>
+                <td class="math">\(x^2\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">^{...}</code></td>
+                <td>Superíndice agrupado</td>
+                <td class="math">\(x^{n+1}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">^{\text{...}}</code></td>
+                <td>Texto en superíndice</td>
+                <td class="math">\(x^{\text{max}}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="subindices">
+        <h2>Subíndices</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">_</code></td>
+                <td>Subíndice</td>
+                <td class="math">\(x_i\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">_{...}</code></td>
+                <td>Subíndice agrupado</td>
+                <td class="math">\(a_{ij}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="raices">
+        <h2>Raíces</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\sqrt{...}</code></td>
+                <td>Raíz cuadrada</td>
+                <td class="math">\(\sqrt{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\sqrt[n]{...}</code></td>
+                <td>Raíz n-ésima</td>
+                <td class="math">\(\sqrt[3]{x}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="fracciones">
+        <h2>Fracciones</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\frac{a}{b}</code></td>
+                <td>Fracción estándar</td>
+                <td class="math">\(\frac{a}{b}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\dfrac{a}{b}</code></td>
+                <td>Fracción en estilo display</td>
+                <td class="math">\(\dfrac{a}{b}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\tfrac{a}{b}</code></td>
+                <td>Fracción en estilo texto</td>
+                <td class="math">\(\tfrac{a}{b}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="binomios">
+        <h2>Binomios</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\binom{n}{k}</code></td>
+                <td>Coeficiente binomial</td>
+                <td class="math">\(\binom{n}{k}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="delimitadores">
+        <h2>Delimitadores</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">( )</code></td>
+                <td>Paréntesis</td>
+                <td class="math">\((x+1)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\left( \right)</code></td>
+                <td>Autoajustables</td>
+                <td class="math">\(\left(\frac{a}{b}\right)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">| |</code></td>
+                <td>Valor absoluto</td>
+                <td class="math">\(|x|\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\| \|</code></td>
+                <td>Norma</td>
+                <td class="math">\(\|x\|\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="corchetes">
+        <h2>Corchetes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">[ ]</code></td>
+                <td>Corchetes</td>
+                <td class="math">\([x]\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\{ \}</code></td>
+                <td>Llaves</td>
+                <td class="math">\(\{x\}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\langle \rangle</code></td>
+                <td>Ángulos</td>
+                <td class="math">\(\langle x\rangle\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="griegas">
+        <h2>Letras griegas</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\alpha … \omega</code></td>
+                <td>Minúsculas</td>
+                <td class="math">
+                  \(\alpha,\beta,\gamma,\delta,\epsilon,\zeta,\eta,\theta,\iota,\kappa,\lambda,\mu,\nu,\xi,\pi,\rho,\sigma,\tau,\upsilon,\phi,\chi,\psi,\omega\)
+                </td>
+              </tr>
+              <tr>
+                <td><code class="k">\varepsilon</code></td>
+                <td>Variante epsilon</td>
+                <td class="math">\(\varepsilon\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\vartheta</code></td>
+                <td>Variante theta</td>
+                <td class="math">\(\vartheta\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\varpi</code></td>
+                <td>Variante pi</td>
+                <td class="math">\(\varpi\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\varrho</code></td>
+                <td>Variante rho</td>
+                <td class="math">\(\varrho\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\varsigma</code></td>
+                <td>Variante sigma</td>
+                <td class="math">\(\varsigma\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\varphi</code></td>
+                <td>Variante phi</td>
+                <td class="math">\(\varphi\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\Gamma … \Omega</code></td>
+                <td>Mayúsculas (las que existen)</td>
+                <td class="math">
+                  \(\Gamma,\Delta,\Theta,\Lambda,\Xi,\Pi,\Sigma,\Upsilon,\Phi,\Psi,\Omega\)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="conjuntos">
+        <h2>Teoría de conjuntos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\in / \notin</code></td>
+                <td>Pertenencia</td>
+                <td class="math">\(x\in A,\ x\notin A\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\subset / \subseteq</code></td>
+                <td>Subconjunto</td>
+                <td class="math">\(A\subset B,\ A\subseteq B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\supset / \supseteq</code></td>
+                <td>Superconjunto</td>
+                <td class="math">\(A\supset B,\ A\supseteq B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\cup / \cap</code></td>
+                <td>Unión / intersección</td>
+                <td class="math">\(A\cup B,\ A\cap B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\setminus</code></td>
+                <td>Diferencia</td>
+                <td class="math">\(A\setminus B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\emptyset</code></td>
+                <td>Conjunto vacío</td>
+                <td class="math">\(\emptyset\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mathcal{P}(A)</code></td>
+                <td>Conjunto potencia</td>
+                <td class="math">\(\mathcal{P}(A)\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="logica">
+        <h2>Lógica</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\forall / \exists / \nexists</code></td>
+                <td>Cuantificadores</td>
+                <td class="math">\(\forall x\ \exists y\ \nexists z\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\neg</code></td>
+                <td>Negación</td>
+                <td class="math">\(\neg P\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\land / \lor</code></td>
+                <td>Conectores lógicos (y / o)</td>
+                <td class="math">\(P\land Q,\ P\lor Q\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\implies / \iff</code></td>
+                <td>Implica / equivalencia</td>
+                <td class="math">\(P\implies Q,\ P\iff Q\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="calculo">
+        <h2>Cálculo</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\lim_{x\to a}</code></td>
+                <td>Límite</td>
+                <td class="math">\(\lim_{x\to 0}\frac{\sin x}{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\frac{d}{dx}</code></td>
+                <td>Derivada</td>
+                <td class="math">\(\frac{d}{dx}x^2=2x\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\partial</code></td>
+                <td>Derivada parcial / símbolo</td>
+                <td class="math">\(\frac{\partial f}{\partial x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\int</code></td>
+                <td>Integral</td>
+                <td class="math">\(\int_0^1 x\,dx\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\iint / \iiint</code></td>
+                <td>Integrales múltiples</td>
+                <td class="math">\(\iint_D f(x,y)\,dx\,dy\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\oint</code></td>
+                <td>Integral de contorno</td>
+                <td class="math">\(\oint_C \mathbf{F}\cdot d\mathbf{r}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\sum</code></td>
+                <td>Sumatoria</td>
+                <td class="math">\(\sum_{i=1}^n i\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\prod</code></td>
+                <td>Producto</td>
+                <td class="math">\(\prod_{i=1}^n i\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="vectores">
+        <h2>Vectores</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\vec{v}</code></td>
+                <td>Vector con flecha</td>
+                <td class="math">\(\vec{v}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\hat{n}</code></td>
+                <td>Unitario / "hat"</td>
+                <td class="math">\(\hat{n}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mathbf{v}</code></td>
+                <td>Vector en negrita</td>
+                <td class="math">\(\mathbf{v}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="matrices">
+        <h2>Matrices</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">matrix</code></td>
+                <td>Matriz sin delimitador</td>
+                <td class="math">\(\begin{matrix}a&b\\c&d\end{matrix}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">pmatrix</code></td>
+                <td>Matriz con paréntesis</td>
+                <td class="math">\(\begin{pmatrix}a&b\\c&d\end{pmatrix}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">bmatrix</code></td>
+                <td>Matriz con corchetes</td>
+                <td class="math">\(\begin{bmatrix}a&b\\c&d\end{bmatrix}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">vmatrix</code></td>
+                <td>Determinante</td>
+                <td class="math">\(\begin{vmatrix}a&b\\c&d\end{vmatrix}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">Vmatrix</code></td>
+                <td>Norma doble</td>
+                <td class="math">\(\begin{Vmatrix}a&b\\c&d\end{Vmatrix}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="funciones">
+        <h2>Funciones</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\sin, \cos, \tan</code></td>
+                <td>Trigonométricas</td>
+                <td class="math">\(\sin x,\ \cos x,\ \tan x\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\arcsin, \arccos, \arctan</code></td>
+                <td>Inversas</td>
+                <td class="math">\(\arctan x\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\log, \ln, \exp</code></td>
+                <td>Logaritmos y exponencial</td>
+                <td class="math">\(\ln x,\ \exp x\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\max, \min, \sup, \inf</code></td>
+                <td>Extremos</td>
+                <td class="math">\(\max_{x\in A} f(x)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\det, \dim, \ker</code></td>
+                <td>Operadores comunes</td>
+                <td class="math">\(\det(A),\ \ker(T)\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="acentos">
+        <h2>Acentos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\hat{x}</code></td>
+                <td>Sombrero</td>
+                <td class="math">\(\hat{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\tilde{x}</code></td>
+                <td>Tilde</td>
+                <td class="math">\(\tilde{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\bar{x}</code></td>
+                <td>Barra</td>
+                <td class="math">\(\bar{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\dot{x}</code></td>
+                <td>Punto</td>
+                <td class="math">\(\dot{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\ddot{x}</code></td>
+                <td>Doble punto</td>
+                <td class="math">\(\ddot{x}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="decoraciones">
+        <h2>Decoraciones</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\overline{AB}</code></td>
+                <td>Línea superior</td>
+                <td class="math">\(\overline{AB}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\underline{x}</code></td>
+                <td>Subrayado</td>
+                <td class="math">\(\underline{x}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\overbrace{...}^{t}</code></td>
+                <td>Llave superior</td>
+                <td class="math">\(\overbrace{x+1}^{t}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\underbrace{...}_{t}</code></td>
+                <td>Llave inferior</td>
+                <td class="math">\(\underbrace{x+1}_{t}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="flechas">
+        <h2>Flechas</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\to</code></td>
+                <td>Flecha simple</td>
+                <td class="math">\(x\to 0\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\leftarrow</code></td>
+                <td>Flecha izquierda</td>
+                <td class="math">\(A\leftarrow B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\leftrightarrow</code></td>
+                <td>Bidireccional</td>
+                <td class="math">\(A\leftrightarrow B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\Rightarrow</code></td>
+                <td>Implicación</td>
+                <td class="math">\(A\Rightarrow B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\Leftrightarrow</code></td>
+                <td>Equivalencia</td>
+                <td class="math">\(A\Leftrightarrow B\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mapsto</code></td>
+                <td>Mapeo</td>
+                <td class="math">\(x\mapsto x^2\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="numericos">
+        <h2>Conjuntos numéricos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\mathbb{N}</code></td>
+                <td>Naturales</td>
+                <td class="math">\(\mathbb{N}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mathbb{Z}</code></td>
+                <td>Enteros</td>
+                <td class="math">\(\mathbb{Z}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mathbb{Q}</code></td>
+                <td>Racionales</td>
+                <td class="math">\(\mathbb{Q}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mathbb{R}</code></td>
+                <td>Reales</td>
+                <td class="math">\(\mathbb{R}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\mathbb{C}</code></td>
+                <td>Complejos</td>
+                <td class="math">\(\mathbb{C}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="probabilidad">
+        <h2>Probabilidad</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">P(A)</code></td>
+                <td>Probabilidad (notación simple)</td>
+                <td class="math">\(P(A)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\Pr(A)</code></td>
+                <td>Probabilidad (operador)</td>
+                <td class="math">\(\Pr(A)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">E(X)</code></td>
+                <td>Esperanza</td>
+                <td class="math">\(E(X)\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="estadistica">
+        <h2>Estadística</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\operatorname{Var}(X)</code></td>
+                <td>Varianza</td>
+                <td class="math">\(\operatorname{Var}(X)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\operatorname{Cov}(X,Y)</code></td>
+                <td>Covarianza</td>
+                <td class="math">\(\operatorname{Cov}(X,Y)\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="geometria">
+        <h2>Geometría</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\angle</code></td>
+                <td>Ángulo</td>
+                <td class="math">\(\angle ABC\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\triangle</code></td>
+                <td>Triángulo</td>
+                <td class="math">\(\triangle ABC\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\perp</code></td>
+                <td>Perpendicular</td>
+                <td class="math">\(a\perp b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\parallel</code></td>
+                <td>Paralelo</td>
+                <td class="math">\(a\parallel b\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="operadores">
+        <h2>Operadores</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\nabla</code></td>
+                <td>Nabla</td>
+                <td class="math">\(\nabla f\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\partial</code></td>
+                <td>Parcial</td>
+                <td class="math">\(\partial\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\det</code></td>
+                <td>Determinante</td>
+                <td class="math">\(\det(A)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\dim</code></td>
+                <td>Dimensión</td>
+                <td class="math">\(\dim(V)\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\ker</code></td>
+                <td>Núcleo</td>
+                <td class="math">\(\ker(T)\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="especiales">
+        <h2>Símbolos especiales</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\infty</code></td>
+                <td>Infinito</td>
+                <td class="math">\(\infty\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\aleph_0</code></td>
+                <td>Aleph (cardinalidad)</td>
+                <td class="math">\(\aleph_0\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\hbar</code></td>
+                <td>Planck reducida</td>
+                <td class="math">\(\hbar\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\ell</code></td>
+                <td>Letra "ell" especial</td>
+                <td class="math">\(\ell\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\Re, \Im</code></td>
+                <td>Parte real / imaginaria</td>
+                <td class="math">\(\Re z,\ \Im z\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="casos">
+        <h2>Funciones por casos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">cases</code></td>
+                <td>Definición por tramos</td>
+                <td class="math">
+                  \(f(x)=\begin{cases}x^2,&x\ge 0\\-x,&x&lt;0\end{cases}\)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="espaciado">
+        <h2>Espaciado</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">\,</code></td>
+                <td>Espacio fino</td>
+                <td class="math">\(a\,b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\:</code></td>
+                <td>Espacio medio</td>
+                <td class="math">\(a\:b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\;</code></td>
+                <td>Espacio grueso</td>
+                <td class="math">\(a\;b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\quad</code></td>
+                <td>Espacio grande</td>
+                <td class="math">\(a\quad b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\qquad</code></td>
+                <td>Espacio muy grande</td>
+                <td class="math">\(a\qquad b\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">\!</code></td>
+                <td>Espacio negativo</td>
+                <td class="math">\(a\!b\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="entornos">
+        <h2>Entornos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Entorno</th>
+                <th>Descripción</th>
+                <th>Ejemplo (render)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="k">aligned</code></td>
+                <td>Alinear ecuaciones (AMSmath)</td>
+                <td class="math">\(\begin{aligned}a&=b\\c&=d\end{aligned}\)</td>
+              </tr>
+              <tr>
+                <td><code class="k">cases</code></td>
+                <td>Definición por casos</td>
+                <td class="math">
+                  \(\begin{cases}1,&x=0\\0,&x\ne0\end{cases}\)
+                </td>
+              </tr>
+              <tr>
+                <td><code class="k">matrix / pmatrix / bmatrix</code></td>
+                <td>Matrices</td>
+                <td class="math">\(\begin{bmatrix}1&0\\0&1\end{bmatrix}\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          Nota: MathJax soporta muchos más entornos AMS (p.ej.
+          <code class="k">align</code>, <code class="k">gather</code>, etc.)
+          según la configuración y paquetes cargados.
+        </p>
+      </section>
+
+      <footer>
+        Si necesitas que esto sea 100% “exhaustivo por comando” (miles de
+        macros), lo correcto es generar el HTML desde la lista oficial de
+        comandos de MathJax (o extraerla del paquete
+        <span class="muted">mathjax-full</span>) y construir la tabla
+        automáticamente.
+      </footer>
+    </main>
+  </body>
+</html>
